@@ -1,0 +1,179 @@
+/* Universal Styles
+================================= */
+
+h2 {
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 400;
+}
+h3 {
+    margin: 0px;
+}
+
+h5{
+    margin: 20px auto 20px 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+* {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+body{
+    margin: 0;
+}
+
+.Result_Panel, .Summary_Panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Result Panel 
+====================================================== */
+
+.Result_Panel{
+    background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    gap: 20px;
+}
+
+.Result_Panel > p, .Score {
+    font-size: 18px;
+    color: rgb(177, 175, 175);
+}
+.Result_Circle {
+    height: 150px;
+    width: 150px;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0px;
+}
+.Result_Circle > h1 {
+    color: white;
+    font-size: 54px;
+    margin-bottom: 0px;
+    margin-top: 35px;
+}
+
+.Result_Circle > p{
+    margin-top: 0px;
+    color: gray;
+}
+
+.Result_Label{
+    color: white;
+    font-size: 24px;    
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.Score{
+    text-align: center;
+    margin: 0px 30px 30px;
+}
+
+/* Summary Panel */
+/* ====================================================== */
+
+.Summary_Panel{
+    gap: 10px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.Summary_Lines{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.Left, .Right {
+    display: flex;
+    align-items: center;
+}
+
+.Left {
+    gap: 20px;
+}
+.Right > h3{
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+.Right{
+    gap: 3px;
+}
+.Right > p{
+    color: rgb(177, 175, 175);
+}
+#Reaction {
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%,.05);
+}
+#Memory {
+    color: hsl(39, 100%, 56%);
+    background-color: hsla(39, 100%, 56%,.05);
+
+}
+#Verbal{
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%,.05);
+
+}
+#Visual{
+    color: hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%,.05);
+}
+
+/* button
+========================= */
+button {
+    font-size: 24px;
+    font-weight: 400;
+    background-color:hsl(224, 30%, 27%) ;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: 340px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        background-color: rgb(239, 239, 239);
+    }
+    .Result_Panel{
+        background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+        border-radius: 25px;
+        gap: 20px;
+        width: 350px;
+        z-index: 1;
+    }
+    .Score{
+        text-align: center;
+        margin: 0px 50px 30px;
+    }
+    .Summary_Panel{
+        margin-left: -20px;
+        padding-left: 50px;
+        padding-right: 20px;
+        width: 330px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+
+    }
+}
+
