@@ -6,7 +6,6 @@ h2 {
     color: white;
 
 }
-
 p {
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
@@ -41,6 +40,8 @@ p {
 
 #Sedan {
     background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 #Suv {
@@ -49,4 +50,67 @@ p {
 
 #Luxury {
     background-color: hsl(179, 100%, 13%);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+button{
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    width: 110px;
+    height: 2.5rem;
+}
+
+#Sedan > button {
+    color: hsl(31, 77%, 52%);
+}
+#Suv > button {
+    color: hsl(184, 100%, 22%);
+}
+#Luxury > button {
+    color: hsl(179, 100%, 13%);
+}
+
+@media only screen and (min-width: 600px) {
+    .Panels {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .Panel {
+        margin: 0px;
+        height: 400px;
+        width: 250px;
+    }
+
+    .Panel > button {
+        margin-top: 80px;
+    }
+
+    #Sedan {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    #Luxury{
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    #Sedan > button:hover{
+        background-color:hsl(31, 77%, 52%);
+        color: white;
+        border: solid white;
+    }
+    #Suv > button:hover{
+        background-color:hsl(184, 100%, 22%);
+        color: white;
+        border: solid white;
+    }
+    #Luxury > button:hover{
+        background-color:hsl(179, 100%, 13%);
+        color: white;
+        border: solid white;
+    }
+    
 }
