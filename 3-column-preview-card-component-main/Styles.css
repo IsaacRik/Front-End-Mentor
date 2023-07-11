@@ -1,0 +1,52 @@
+h2 {
+    font-family: 'Big Shoulders Display';
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0px;
+    color: white;
+
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+}
+
+
+.Panels {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.Panel {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px 0px;
+    padding: 40px;
+    gap: 30px;
+}
+
+.Panel > img {
+    width: 45px;
+    height: 30px;
+}
+
+
+
+/* Specific Panels */
+
+#Sedan {
+    background-color: hsl(31, 77%, 52%);
+}
+
+#Suv {
+    background-color: hsl(184, 100%, 22%);
+}
+
+#Luxury {
+    background-color: hsl(179, 100%, 13%);
+}
