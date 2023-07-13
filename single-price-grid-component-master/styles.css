@@ -2,13 +2,126 @@
     font-family: 'Karla', sans-serif;
 }
 
+
 p {
     font-size: 16px;
 }
 body {
+    background-color: aliceblue;
+}
+.panels {
     display: flex;
     flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.top_panel, .second_panel, .third_panel {
     padding-left: 20px;
     padding-right: 20px;
 }
 
+
+.top_panel {
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-bottom: 10px;
+}
+
+.top_panel > h2 {
+    color: hsl(179, 62%, 43%);
+}
+
+.top_panel > h3 {
+    color: hsl(71, 73%, 54%);
+}
+
+.top_panel > p {
+    color: gray;
+}
+
+.bottom_panels_desktop{
+    display: flex;
+    flex-direction: column;
+}
+.second_panel {
+    background-color:hsl(179, 62%, 43%) ;
+    display: flex;
+    flex-direction: column;
+}
+
+.second_panel > h2 {
+    color: white;
+}
+
+.second_panel > p{
+    color: rgb(226, 226, 226);
+    margin-bottom: 0px;
+}
+.second_panel > .text {
+    color: white;
+}
+
+span {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+button{
+    justify-self: center;
+    color: white;
+    font-size: 20px;
+    background-color:hsl(71, 73%, 54%);
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin:20px 0px 20px;
+}
+.third_panel{
+    background-color:hsl(179, 62%, 45%) ;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.third_panel >h2 {
+    color: white;
+}
+
+.third_panel > ul {
+    color: rgb(239, 239, 239);
+    padding-left: 0px;
+    margin-bottom: 20px;
+}
+
+ul > p {
+    margin: 2px 0px 2px;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom_panels_desktop {
+        flex-direction: row;
+        margin: 0px;
+        padding: 0px;
+    }
+    .second_panel, .third_panel{
+        flex: auto;
+    }
+    .panels {
+        display: flex;
+        width: 600px;
+    }
+    .third_panel{
+        border-bottom-left-radius: 0px;
+    }
+    .second_panel{
+        border-bottom-left-radius: 5px;
+    }
+
+}
