@@ -8,12 +8,16 @@ p {
 }
 body {
     background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 }
 .panels {
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
-    padding-right: 10px;
+    max-width: 320px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px hsla(0, 0%, 0.7%, 0.3);
 }
 
 .top_panel, .second_panel, .third_panel {
@@ -24,9 +28,8 @@ body {
 
 .top_panel {
     background-color: white;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     padding-bottom: 10px;
+    border-radius: 5px 5px 0 0 ;
 }
 
 .top_panel > h2 {
@@ -81,11 +84,11 @@ button{
 }
 .third_panel{
     background-color:hsl(179, 62%, 45%) ;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 0 0 5px 5px ;
+
 }
 
-.third_panel >h2 {
+.third_panel h2 {
     color: white;
 }
 
@@ -100,22 +103,20 @@ ul > p {
 }
 
 @media only screen and (min-width: 600px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+
     .bottom_panels_desktop {
         flex-direction: row;
         margin: 0px;
         padding: 0px;
+
     }
     .second_panel, .third_panel{
-        flex: auto;
+        flex: 1 1 0;
     }
     .panels {
         display: flex;
         width: 600px;
+        max-width: max-content;
     }
     .third_panel{
         border-bottom-left-radius: 0px;
